@@ -160,7 +160,7 @@ class MultiExec:
         multi, *acks, replies = responses
 
         if not multi == OK:
-            raise ValueError("Got '{multi}' from MULTI instead of '{OK}' ")
+            raise ValueError(f"Got '{multi}' from MULTI instead of '{OK}' ")
 
         if isinstance(replies, Exception):
             transaction_error = replies
